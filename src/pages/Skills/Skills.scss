@@ -1,0 +1,104 @@
+$green: #00DC53;
+
+
+.skills {
+    margin-top: 40px;
+    @media(max-width:1300px) {
+        margin-top: 10px;
+    }
+    &__title {
+        margin-top: 0;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #fff;
+        font-size: 80px;
+        font-family: 'Bebas Neue';
+        letter-spacing: 25px;
+        text-shadow: 5px -5px 0 rgba(0, 220, 83, 0.62);
+        @media(max-width:1300px) {
+            margin-bottom: 0px;
+        }
+        @media(max-width:850px){
+            margin-bottom: 20px;
+        }
+        @media(max-width:550px) {
+            line-height: 1;
+            margin-bottom: 0;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @media(max-width:550px){
+            flex-direction: column;
+        }
+    }
+
+    &__chart {
+        display: flex;
+        justify-content: center;
+        // animation-name: chart;
+        // animation-duration: 10s;
+        // animation-iteration-count: infinite;
+        // animation-timing-function: linear;
+        transition-duration: 0.4s;
+        &:hover{
+            transform: scale(1.15);
+        }
+    }
+
+    &__team {
+        position: relative;
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            margin-bottom: 41px;
+            @media(max-width:900px) {
+                margin-bottom: 15px;
+            }
+            img {
+                margin-right: 10px;
+                @media(max-width:900px) {
+                    width: 40px;
+                }
+                &:hover {
+                    transition-duration: 0.7s;
+                    transform: rotate(350deg);
+                }
+            }
+
+            p {
+                color: #fff;
+                font-size: 30px;
+                @media(max-width:900px) {
+                    font-size: 22px;
+                }
+                @media(max-width:550px) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+// .recharts-text.recharts-polar-angle-axis-tick-value {
+//         animation-name: chart;
+//         animation-duration: 10s;
+//         animation-iteration-count: infinite;
+//         animation-timing-function: linear;
+// }
+
+@keyframes chart {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}

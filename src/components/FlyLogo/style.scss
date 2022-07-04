@@ -1,0 +1,10 @@
+.fly {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: 0;
+    
+    &__line{
+        position: absolute;
+    }
+}

@@ -1,0 +1,209 @@
+$green: #00DC53;
+$blackBody: #101010;
+
+.portfolio {
+    position: relative;
+    padding-top: 30px;
+    width: calc(100vw - 142px);
+
+    @media(max-width:768px) {
+        width: 100vw;
+    }
+
+    @media(max-width:1100px) {
+        padding-top: 7px;
+    }
+
+    &__title-inner {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 90px;
+        margin: 0;
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 10px;
+
+        @media(max-width:1100px) {
+            line-height: 1;
+        }
+
+        @media(max-width:500px) {
+            font-size: 55px;
+        }
+        @media(max-width:350px){
+            letter-spacing: 8px;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        height: 500px;
+        overflow-y: scroll;
+        margin: 0 auto;
+        transition-duration: 1.5s;
+        scrollbar-color: #458245 #714826;
+
+        @media(max-width:1100px) {
+            height: 65vh;
+        }
+
+        @media(max-width:500px) {
+            height: 70vh;
+        }
+
+        &::-webkit-scrollbar {
+            cursor: pointer;
+            width: 8px;
+            /* ширина для вертикального скролла */
+            background-color: $blackBody;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $green;
+            cursor: pointer;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    @media(max-width:1100px) {
+        margin-bottom: 40px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        position: relative;
+
+        li {
+            color: #fff;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        li+li {
+            margin-left: 15px;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        background-color: $green;
+        height: 2px;
+        transition-duration: 0.3s;
+    }
+}
+
+.portfolio-block {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition-duration: 1.5s;
+
+    // &-exit {
+    //     // height: 0px;
+    //     opacity: 1;
+    // }
+
+    // &-exit-active {
+    //     opacity: 0;
+    // }
+
+    // &-enter {
+    //     // height: 0px;
+    //     opacity: 0;
+    // }
+
+
+    // &-enter-active {
+    //     opacity: 1;
+    // }
+
+    &+& {}
+
+    &__inner {
+        transform-style: preserve-3d;
+        height: inherit;
+        transition-duration: 0.5s;
+        transform-origin: left;
+
+        &:hover {
+            transform: rotateY(-90deg);
+        }
+
+    }
+
+    &__info {
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        width: 101%;
+        height: 101%;
+        background-color: rgba(0, 0, 0, 0.622);
+        padding: 20px;
+
+        p {
+            color: #fff;
+            margin-top: 0;
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+
+        button {
+            width: 50%;
+            height: 40px;
+            border-radius: 2px;
+            display: block;
+            background-color: $green;
+            margin: 0 auto;
+            cursor: pointer;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            font-size: 18px;
+
+            &:hover {
+                box-shadow: 0 0 8px 2px black;
+            }
+        }
+    }
+
+    &__face {
+        transform: translateZ(0px);
+    }
+
+    &__side {
+        transform: translateX(150px) translateZ(-150px) rotateY(90deg);
+    }
+
+    &__face,
+    &__side {
+        border: 2px solid;
+        height: 300px;
+        position: absolute;
+        width: 300px;
+        top: 0;
+        left: 0;
+        max-width: 300px;
+        background-size: cover;
+
+        img {
+            width: 100%;
+        }
+    }
+}

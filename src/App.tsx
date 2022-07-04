@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, useLocation } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Main from "./pages/Main/Main";
+import Skils from "./pages/Skills/Skills";
+import "./App.scss"
+import About from "./pages/About/About";
+import Portfolio from "./pages/Protfolio/Portfolio";
 
-function App() {
+const App: React.FC = () => {
+  const location = useLocation()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <TransitionGroup>
+      <CSSTransition key={location.key} classNames="pages" timeout={15000}>
+        <Routes location={location}>
+          <Route path="/" element={<Main />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skils" element={<Skils />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+        </Routes>
+      </CSSTransition>
+      <Routes location={location}>
+      </Routes>
+    </TransitionGroup>
+  )
 }
 
-export default App;
+export default App

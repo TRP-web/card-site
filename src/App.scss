@@ -1,0 +1,400 @@
+$green: #00DC53;
+$blackBody: #191919;
+$blackHeader: #151515;
+$blackActive: #0D0D0D;
+$white: #fff;
+$animation-time: 1.5s;
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $blackBody;
+  // font-family: 'Bebas Neue', cursive;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $blackHeader;
+  width: 142px;
+  padding-top: 24px;
+  z-index: 11;
+  transition-duration: 0.6s;
+
+  @media(max-width:768px) {
+    position: absolute;
+    width: 200px;
+    box-shadow: 0 0 35px 10px;
+    left: -200px;
+    height: 100vh;
+
+    &.active {
+      left: 0;
+    }
+  }
+
+
+  &__logo {
+    align-self: center;
+    width: 120px;
+    margin-top: 20px;
+    transition-duration: 0.3s;
+
+    @media(max-width:768px) {
+      margin-top: 35px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__links {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 120px;
+
+    li {
+      a {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid $green;
+        padding: 15px 0;
+        cursor: pointer;
+        color: $white;
+        font-weight: 500;
+        text-decoration: none;
+        transition-duration: 0.5s;
+        width: 100%;
+
+        &:hover {
+          width: 110%;
+          background-color: $blackActive;
+
+          @media(max-width:768px) {
+            width: 100%;
+          }
+        }
+
+        &.active {
+          width: 110%;
+          background-color: $blackActive;
+
+          @media(max-width:768px) {
+            width: 100%;
+            border-bottom: 2px solid $green;
+
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    color: $green;
+    display: block;
+  }
+
+  a+a {}
+}
+
+h1 {
+  color: $green;
+}
+
+p {
+  color: $green;
+}
+
+.inner {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+.pages {
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  z-index: 10;
+  transition-duration: $animation-time;
+
+  &-enter {
+    transition-duration: $animation-time;
+    transform: translateX(90vw);
+    opacity: 0;
+  }
+
+  &-enter.pages-enter-active {
+    transform: translateX(0vw);
+    transition-duration: $animation-time;
+    opacity: 1;
+  }
+
+  &-exit {
+    transform: translateY(0px) scale(1);
+    transition-duration: $animation-time;
+    opacity: 1;
+  }
+
+  &-exit.pages-exit-active {
+    transform: translateY(70vh) scale(0.6);
+    opacity: 0;
+    transition-duration: $animation-time;
+
+  }
+}
+
+
+.main {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: calc(100vw - 142px);
+
+  @media(max-width:768px) {
+    width: 100vw;
+  }
+
+  &__title {
+    color: $white;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    line-height: 1;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 95px;
+    position: relative;
+
+    @media(max-width:425px) {
+      font-size: 60px;
+    }
+  }
+
+  &__button {
+    background-color: $green;
+    display: flex;
+    justify-content: space-around;
+    max-width: 165px;
+    width: 100%;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      .arrow {
+        transform: rotate(90deg);
+      }
+    }
+
+    img {
+      transition-duration: 0.3s;
+    }
+
+    span {
+      color: $white;
+    }
+  }
+
+  &__beck-text {
+    position: absolute;
+    color: #1E1E1E;
+    font-size: 300px;
+    font-family: 'Bebas Neue', cursive;
+    z-index: 0;
+  }
+}
+
+#beck-text-1 {
+  left: 0;
+  top: -70px;
+}
+
+#beck-text-2 {
+  right: 0;
+  bottom: -100px;
+}
+
+.container {
+  width: calc(100vw - 142px);
+
+  @media(max-width:768px) {
+    width: 100vw;
+  }
+
+  height: 100vh
+}
+
+.angel-left,
+.angel-right {
+  position: absolute;
+  width: 20px;
+
+  @media(max-width:1000px) {
+    display: none;
+  }
+}
+
+.angel-left {
+  left: -10px;
+  top: -10px;
+}
+
+.angel-right {
+  right: -10px;
+  bottom: -10px;
+  transform: rotate(180deg);
+}
+
+.square {
+  z-index: 0;
+  position: absolute;
+  animation-name: square-img;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+
+
+}
+
+@keyframes square-img {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+#square-1 {
+  width: 500px;
+  top: 0;
+  left: 0;
+
+
+}
+
+@media(max-width:768px) {
+  // .burger {
+  //   width: 50px;
+  //   height: 50px;
+  //   background-color: #00DC53;
+  //   margin: 0 auto;
+  //   position: absolute;
+  //   cursor: pointer;
+  //   z-index: 90;
+  //   left: 5px;
+  //   top: 5px;
+  //   transition-duration: 0.6s;
+
+  //   &.active {
+  //     background-color: red;
+  //     left: 75px;
+  //   }
+  // }
+  $dark: #00DC53;
+  $light: #efefef;
+  $color: #b3e5fc;
+  
+  @mixin btn($left, $top) {
+    position: absolute;
+    width: 60px;
+    height: 63px;
+    top: $top;
+    left: $left;
+    transition-duration: 0.5s;
+  }
+  
+  @mixin icon($height, $width) {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: $height;
+    width: $width;
+    top: 30px;
+    background-color: $dark;
+  }
+  
+  @mixin icon-before($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $dark;
+    content: "";
+    top: $top;
+  }
+  
+  @mixin icon-after($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $dark;
+    content: "";
+    top: $top;
+  }
+  
+
+  .burger {
+    @include btn(5px, 5px);
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    background-color: #1E1E1E;
+    .icon {
+      @include icon(5px, 37px);
+  
+      &:before {
+        @include icon-before(5px, 37px, -14px);
+      }
+  
+      &:after {
+        @include icon-after(5px, 37px, 14px);
+      }
+    }
+  
+    &.active {
+      top: 0px;
+      left: 75px;
+      background-color: transparent;
+      .icon {
+        transition-duration: 0.5s;
+        width: 38px;
+        transform: rotateZ(180deg);
+  
+        &:before {
+          transform: rotateZ(45deg) scaleX(0.75) translate(19px, -6px);
+        }
+  
+        &:after {
+          transform: rotateZ(-45deg) scaleX(0.75) translate(19px, 6px);
+        }
+      }
+    }
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
