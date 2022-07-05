@@ -26,8 +26,7 @@ const About: React.FC = () => {
 
                             <h1 className="about__title">About myself</h1>
                             <p className="about__paragraf">
-                                I'm Web Developer from Ukraine. I Very like create different web sites, long time
-                                was engaged Front-end develepment but last three month learn Beck-end tehnologis.
+                                I'm Web Developer from Ukraine. I Very like create different web sites, besides react development i can create back-end on node js and know how to work no sql database
                                 <br />
                                 <br />
                                 I have low of experience in commercial develepment, 20 projects on the exchange and 3 mounts edit and create different easy web site

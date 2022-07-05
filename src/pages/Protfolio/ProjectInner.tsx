@@ -22,7 +22,7 @@ const ProjectInner: React.FC<IProjectInnerProps> = ({ type }) => {
     }
 
     return (
-        <div style={{position: "relative"}}>
+        <div style={{ position: "relative" }}>
             <div className={"portfolio__inner"}>
 
                 {
@@ -33,7 +33,11 @@ const ProjectInner: React.FC<IProjectInnerProps> = ({ type }) => {
                             //     classNames={"portfolio-block"}
                             //     timeout={0}
                             // >
-                            <ProjectBlock images={work.images}>
+                            <ProjectBlock
+                                link={work.link}
+                                images={work.images}
+                                key={index}
+                                >
                                 {work.text}
                             </ProjectBlock>
                             // </CSSTransition>
