@@ -4,10 +4,6 @@ import Line from './Line'
 
 const MoveBackGround: React.FC = () => {
 
-    const lineArray = useGetArray(
-        "React"
-        , 20)
-
     return (
         <>
             {/* {
@@ -29,22 +25,13 @@ const MoveBackGround: React.FC = () => {
                 Ukraine
             </Line>
             <Line>
-                Live
+                ReactJS
             </Line>
             <Line>
-                Web developer
+                NEXT
             </Line>
             <Line>
-                Ukraine
-            </Line>
-            <Line>
-                Live
-            </Line>
-            <Line>
-                Web developer
-            </Line>
-            <Line>
-                Ukraine
+                Front-end
             </Line>
             <Line>
                 Live
@@ -62,8 +49,69 @@ const MoveBackGround: React.FC = () => {
                 Web developer
             </Line>
             <Line>
+                Job
+            </Line>
+            <Line>
+                Live
+            </Line>
+            <Line>
+                Portfolio
+            </Line>
+            <Line>
                 Ukraine
             </Line>
+            {
+                window.screen.width > 1599 ?
+                    <>
+                        <Line>
+                            Live
+                        </Line>
+                        <Line>
+                            Web developer
+                        </Line>
+                        <Line>
+                            Ukraine
+                        </Line>
+                        <Line>
+                            Live
+                        </Line>
+                        <Line>
+                            Web developer
+                        </Line>
+                        <Line>
+                            Ukraine
+                        </Line>
+                        <Line>
+                            Live
+                        </Line>
+                        <Line>
+                            Web developer
+                        </Line>
+                        <Line>
+                            Ukraine
+                        </Line>
+                        <Line>
+                            Live
+                        </Line>
+                        <Line>
+                            Web developer
+                        </Line>
+                        <Line>
+                            Ukraine
+                        </Line>
+                        <Line>
+                            Live
+                        </Line>
+                        <Line>
+                            Web developer
+                        </Line>
+                        <Line>
+                            Ukraine
+                        </Line>
+                    </>
+
+                    : null
+            }
         </>
 
     )

@@ -32,7 +32,9 @@ $green: #00DC53;
     &__text-inner {
         margin-right: 200px;
         position: relative;
-
+        @media(min-width:1600px) {
+            margin-right: 300px;
+        }
         @media (max-width: 1300px) {
             margin-right: 140px;
         }
@@ -70,7 +72,9 @@ $green: #00DC53;
         margin: 0;
         font-family: 'Bebas Neue', sans-serif;
         letter-spacing: 10px;
-
+        @media(min-width:1600px) {
+            font-size: 100px;
+        }
         @media(max-width:1080px) {
             font-size: 60px;
         }
@@ -91,7 +95,10 @@ $green: #00DC53;
         max-width: 450px;
         color: #fff;
         font-size: 22px;
-
+        @media(min-width:1600px) {
+            font-size: 30px;
+            max-width: 600px;
+        }
         @media(max-width:1080px) {
             font-size: 18px;
             max-width: 300px;

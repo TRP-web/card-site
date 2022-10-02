@@ -14,7 +14,20 @@ const RadarChartCustum: React.FC = () => {
     }
 
     const adaptRadar = (width: number) => {
-        if (width > 851) {
+        if (width > 1500) {
+            return {
+                main: {
+                    cx: 325,
+                    cy: 287,
+                    outerRadius: 200,
+                    width: 600,
+                    height: 500,
+                    data: data
+                },
+                skilsFont: "32px",
+                radiusFont: "25px"
+            }
+        } else if (width > 851) {
             return {
                 main: {
                     cx: 260,

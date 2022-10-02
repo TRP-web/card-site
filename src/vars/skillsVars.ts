@@ -33,6 +33,12 @@ export const data = [
 
 export const someWorks = [
     {
+        images: "verbs.png",
+        text: "My last project. I used all of my ability and create web-site which help me learning irregular verbs. it used google OAuth 2.0 for registration/login (29.09.2022 - don't working on hosting beacuse google don't like my hosting, you can sew my code in gitHub)",
+        link: "http://214024.fornex.cloud:4000"
+
+    },
+    {
         images: "salt.png",
         text: "One of the many sites I have made, when worked on exchenge",
         link: "https://trp-web.github.io/My-Portfolio/salt/index.html"

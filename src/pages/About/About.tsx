@@ -26,10 +26,15 @@ const About: React.FC = () => {
 
                             <h1 className="about__title">About myself</h1>
                             <p className="about__paragraf">
-                                I'm Web Developer from Ukraine. I Very like create different web sites, besides react development i can create back-end on node js and know how to work no sql database
+                                Hello, I Front-end developer from Ukraine. Full last 3 years I have been living web-development and creating a web sites. I like intresting projects and  team development with other people, it is capturing.
                                 <br />
                                 <br />
-                                I have low of experience in commercial develepment, 20 projects on the exchange and 3 mounts edit and create different easy web site
+                                I have 1 year experience of  Front-end development and creating different web pages. I sure of my skills development, and ready show you this.
+                                <br />
+
+                                My <strong>GitHub</strong> - <a style={{ color: "#fff" }} href='https://github.com/TRP-web'>https://github.com/TRP-web</a>
+                                <br />
+                                My <strong>Email</strong> - kusokpocki@gmail.com
                             </p>
                         </div>
                         <React.Suspense fallback={<div style={{ color: "#fff" }}>Loading...</div>}>

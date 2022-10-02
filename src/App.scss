@@ -101,8 +101,6 @@ body {
     color: $green;
     display: block;
   }
-
-  a+a {}
 }
 
 h1 {
@@ -178,9 +176,14 @@ p {
     font-size: 95px;
     position: relative;
 
+    @media(min-width:1600px) {
+      font-size: 120px;
+    }
+
     @media(max-width:425px) {
       font-size: 60px;
     }
+
   }
 
   &__button {
@@ -197,7 +200,11 @@ p {
     text-transform: uppercase;
     text-decoration: none;
     position: relative;
-
+    @media(min-width:1600px) {
+      max-width: 230px;
+      padding: 25px 0;
+      font-size: 30px;
+    }
     &:hover {
       .arrow {
         transform: rotate(90deg);
@@ -219,6 +226,7 @@ p {
     font-size: 300px;
     font-family: 'Bebas Neue', cursive;
     z-index: 0;
+    
   }
 }
 
@@ -312,7 +320,7 @@ p {
   $dark: #00DC53;
   $light: #efefef;
   $color: #b3e5fc;
-  
+
   @mixin btn($left, $top) {
     position: absolute;
     width: 60px;
@@ -321,7 +329,7 @@ p {
     left: $left;
     transition-duration: 0.5s;
   }
-  
+
   @mixin icon($height, $width) {
     transition-duration: 0.5s;
     position: absolute;
@@ -330,7 +338,7 @@ p {
     top: 30px;
     background-color: $dark;
   }
-  
+
   @mixin icon-before($height, $width, $top) {
     transition-duration: 0.5s;
     position: absolute;
@@ -340,7 +348,7 @@ p {
     content: "";
     top: $top;
   }
-  
+
   @mixin icon-after($height, $width, $top) {
     transition-duration: 0.5s;
     position: absolute;
@@ -350,7 +358,7 @@ p {
     content: "";
     top: $top;
   }
-  
+
 
   .burger {
     @include btn(5px, 5px);
@@ -358,43 +366,41 @@ p {
     display: flex;
     justify-content: center;
     background-color: #1E1E1E;
+
     .icon {
       @include icon(5px, 37px);
-  
+
       &:before {
         @include icon-before(5px, 37px, -14px);
       }
-  
+
       &:after {
         @include icon-after(5px, 37px, 14px);
       }
     }
-  
+
     &.active {
       top: 0px;
       left: 75px;
       background-color: transparent;
+
       .icon {
         transition-duration: 0.5s;
         width: 38px;
         transform: rotateZ(180deg);
-  
+
         &:before {
           transform: rotateZ(45deg) scaleX(0.75) translate(19px, -6px);
         }
-  
+
         &:after {
           transform: rotateZ(-45deg) scaleX(0.75) translate(19px, 6px);
         }
       }
     }
-  
+
     &:hover {
       cursor: pointer;
     }
   }
 }
-
-
-
-

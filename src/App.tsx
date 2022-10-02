@@ -11,7 +11,7 @@ const App: React.FC = () => {
 
   return (
     <TransitionGroup>
-      <CSSTransition key={location.key} classNames="pages" timeout={15000}>
+      <CSSTransition key={location.key} classNames="pages" timeout={1500}>
         <Routes location={location}>
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
