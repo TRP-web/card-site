@@ -35,7 +35,7 @@ export const someWorks = [
     {
         images: "verbs.png",
         text: "My last project. I used all of my ability and create web-site which help me learning irregular verbs. it used google OAuth 2.0 for registration/login (29.09.2022 - don't working on hosting beacuse google don't like my hosting, you can sew my code in gitHub)",
-        link: "http://214024.fornex.cloud:4000"
+        link: "https://irregular-verbs-front-trp-web.vercel.app"
 
     },
     {
@@ -47,7 +47,7 @@ export const someWorks = [
     {
         images: "delivery.png",
         text: "Web show on ReactJS",
-        link: "http://31.172.75.19:39639"
+        link: "https://trp-web.com/deliver"
     },
     {
         images: "wellbe.png",
@@ -64,8 +64,7 @@ export const someWorks = [
     {
         images: "timer.png",
         text: "Timer created on ReactJS",
-        link: "http://31.172.75.19:37409"
-
+        link: "http://trp-web.com:37409"
     },
 
 
